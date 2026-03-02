@@ -1,0 +1,79 @@
+transaction_id,date,customer_name,customer_email,customer_address,customer_phone,product_category,product_sku,product_name,unit_price,quantity,total_line_value,supplier_name,supplier_email
+TXN-2001,2024-02-21,Andres Lopez,andres.lopez@gmail.com,Cra 45 #12-90 Medellin,3012223344,Accessories,MSE-LOG-502,Mouse Logitech M502,150000,3,450000,TechWorld SAS,ventas@techworld.com
+TXN-2001,2024-02-21,Andres Lopez,andres.lopez@gmail.com,Cra 45 #12-90 Medellin,3012223344,Home,CLK-WAL-05,Reloj de Pared,80000,1,80000,TechWorld SAS,ventas@techworld.com
+TXN-2001,2024-02-21,Andres Lopez,andres.lopez@gmail.com,Cra 45 #12-90 Medellin,3012223344,Electronics,TBL-SAM-10,"Tablet Samsung 10""",1200000,3,3600000,TechWorld SAS,ventas@techworld.com
+TXN-2002,2024-02-24,Natalia Vega,natalia.vega@mail.com,Cra 7 #45-12 Medellin,3089990011,Electronics,LPT-DEL-001,Laptop Dell Inspiron,3200000,1,3200000,TechWorld SAS,ventas@techworld.com
+TXN-2002,2024-02-24,Natalia Vega,natalia.vega@mail.com,Cra 7 #45-12 Medellin,3089990011,Home,CLK-WAL-05,Reloj de Pared,80000,3,240000,TechWorld SAS,ventas@techworld.com
+TXN-2002,2024-02-24,Natalia Vega,natalia.vega@mail.com,Cra 7 #45-12 Medellin,3089990011,Electronics,MON-LG-27,Monitor LG 27 pulgadas,850000,3,2550000,TechWorld SAS,ventas@techworld.com
+TXN-2002,2024-02-24,Natalia Vega,natalia.vega@mail.com,Cra 7 #45-12 Medellin,3089990011,Accessories,MSE-LOG-502,Mouse Logitech M502,150000,1,150000,TechWorld SAS,ventas@techworld.com
+TXN-2003,2024-02-18,Daniel Torres,daniel.torres@gmail.com,Calle 8 #14-77 Barranquilla,3034445566,Accessories,MSE-LOG-502,Mouse Logitech M502,150000,1,150000,Global Supplies Co,sales@globalsupplies.com
+TXN-2003,2024-02-18,Daniel Torres,daniel.torres@gmail.com,Calle 8 #14-77 Barranquilla,3034445566,Home,DSK-MDF-02,Escritorio MDF,750000,1,750000,Global Supplies Co,sales@globalsupplies.com
+TXN-2003,2024-02-18,Daniel Torres,daniel.torres@gmail.com,Calle 8 #14-77 Barranquilla,3034445566,Electronics,PRN-HP-110,Impresora HP 110,600000,3,1800000,Global Supplies Co,sales@globalsupplies.com
+TXN-2003,2024-02-18,Daniel Torres,daniel.torres@gmail.com,Calle 8 #14-77 Barranquilla,3034445566,Accessories,KEY-RED-001,Teclado Redragon,180000,2,360000,Global Supplies Co,sales@globalsupplies.com
+TXN-2004,2024-02-11,Valentina Cruz,valen.cruz@mail.com,Cra 12 #45-67 Cartagena,3045556677,Electronics,PHN-XIA-12,Smartphone Xiaomi 12,1800000,1,1800000,HogarPro Ltda,contacto@hogarpro.com
+TXN-2004,2024-02-11,Valentina Cruz,valen.cruz@mail.com,Cra 12 #45-67 Cartagena,3045556677,Accessories,HDP-SNY-01,Audifonos Sony WH,450000,1,450000,HogarPro Ltda,contacto@hogarpro.com
+TXN-2005,2024-02-13,Andres Lopez,andres.lopez@gmail.com,Cra 45 #12-90 Medellin,3012223344,Electronics,PRN-HP-110,Impresora HP 110,600000,1,600000,AccesNet SAS,info@accesnet.com
+TXN-2005,2024-02-13,Andres Lopez,andres.lopez@gmail.com,Cra 45 #12-90 Medellin,3012223344,Accessories,KEY-RED-001,Teclado Redragon,180000,3,540000,AccesNet SAS,info@accesnet.com
+TXN-2005,2024-02-13,Andres Lopez,andres.lopez@gmail.com,Cra 45 #12-90 Medellin,3012223344,Electronics,PHN-XIA-12,Smartphone Xiaomi 12,1800000,2,3600000,AccesNet SAS,info@accesnet.com
+TXN-2006,2024-02-18,Andres Lopez,andres.lopez@gmail.com,Cra 45 #12-90 Medellin,3012223344,Home,LMP-LED-09,Lampara LED,120000,2,240000,Distribuciones Andinas,ventas@andinas.com
+TXN-2007,2024-02-27,Felipe Gomez,felipe.gomez@mail.com,Av 68 #23-45 Cali,3090001122,Home,SHF-MTL-03,Estanteria Metalica,420000,1,420000,AccesNet SAS,info@accesnet.com
+TXN-2007,2024-02-27,Felipe Gomez,felipe.gomez@mail.com,Av 68 #23-45 Cali,3090001122,Electronics,MON-LG-27,Monitor LG 27 pulgadas,850000,3,2550000,AccesNet SAS,info@accesnet.com
+TXN-2008,2024-02-08,Valentina Cruz,valen.cruz@mail.com,Cra 12 #45-67 Cartagena,3045556677,Accessories,WBC-ANK-01,Webcam Anker HD,250000,2,500000,TechWorld SAS,ventas@techworld.com
+TXN-2008,2024-02-08,Valentina Cruz,valen.cruz@mail.com,Cra 12 #45-67 Cartagena,3045556677,Electronics,MON-LG-27,Monitor LG 27 pulgadas,850000,2,1700000,TechWorld SAS,ventas@techworld.com
+TXN-2009,2024-02-15,Miguel Herrera,miguel.h@gmail.com,Calle 50 #10-11 Bucaramanga,3056667788,Accessories,HDP-SNY-01,Audifonos Sony WH,450000,2,900000,HogarPro Ltda,contacto@hogarpro.com
+TXN-2009,2024-02-15,Miguel Herrera,miguel.h@gmail.com,Calle 50 #10-11 Bucaramanga,3056667788,Accessories,MSE-LOG-502,Mouse Logitech M502,150000,3,450000,HogarPro Ltda,contacto@hogarpro.com
+TXN-2009,2024-02-15,Miguel Herrera,miguel.h@gmail.com,Calle 50 #10-11 Bucaramanga,3056667788,Accessories,USB-SNY-128,USB Sony 128GB,90000,3,270000,HogarPro Ltda,contacto@hogarpro.com
+TXN-2010,2024-02-21,Andres Lopez,andres.lopez@gmail.com,Cra 45 #12-90 Medellin,3012223344,Home,LMP-LED-09,Lampara LED,120000,1,120000,Global Supplies Co,sales@globalsupplies.com
+TXN-2010,2024-02-21,Andres Lopez,andres.lopez@gmail.com,Cra 45 #12-90 Medellin,3012223344,Home,SHF-MTL-03,Estanteria Metalica,420000,1,420000,Global Supplies Co,sales@globalsupplies.com
+TXN-2011,2024-02-15,Camila Rojas,camila.rojas@mail.com,Av 3 #22-44 Pereira,3067778899,Accessories,USB-SNY-128,USB Sony 128GB,90000,1,90000,AccesNet SAS,info@accesnet.com
+TXN-2011,2024-02-15,Camila Rojas,camila.rojas@mail.com,Av 3 #22-44 Pereira,3067778899,Accessories,HDP-SNY-01,Audifonos Sony WH,450000,1,450000,AccesNet SAS,info@accesnet.com
+TXN-2012,2024-02-27,Laura Martinez,laura.martinez@gmail.com,Calle 10 #20-30 Bogota,3001112233,Accessories,KEY-RED-001,Teclado Redragon,180000,3,540000,AccesNet SAS,info@accesnet.com
+TXN-2012,2024-02-27,Laura Martinez,laura.martinez@gmail.com,Calle 10 #20-30 Bogota,3001112233,Electronics,MON-LG-27,Monitor LG 27 pulgadas,850000,2,1700000,AccesNet SAS,info@accesnet.com
+TXN-2012,2024-02-27,Laura Martinez,laura.martinez@gmail.com,Calle 10 #20-30 Bogota,3001112233,Accessories,MSE-LOG-502,Mouse Logitech M502,150000,1,150000,AccesNet SAS,info@accesnet.com
+TXN-2012,2024-02-27,Laura Martinez,laura.martinez@gmail.com,Calle 10 #20-30 Bogota,3001112233,Electronics,PRN-HP-110,Impresora HP 110,600000,3,1800000,AccesNet SAS,info@accesnet.com
+TXN-2013,2024-02-16,Camila Rojas,camila.rojas@mail.com,Av 3 #22-44 Pereira,3067778899,Accessories,KEY-RED-001,Teclado Redragon,180000,1,180000,Distribuciones Andinas,ventas@andinas.com
+TXN-2013,2024-02-16,Camila Rojas,camila.rojas@mail.com,Av 3 #22-44 Pereira,3067778899,Electronics,TBL-SAM-10,"Tablet Samsung 10""",1200000,3,3600000,Distribuciones Andinas,ventas@andinas.com
+TXN-2014,2024-02-18,Natalia Vega,natalia.vega@mail.com,Cra 7 #45-12 Medellin,3089990011,Home,CLK-WAL-05,Reloj de Pared,80000,1,80000,AccesNet SAS,info@accesnet.com
+TXN-2014,2024-02-18,Natalia Vega,natalia.vega@mail.com,Cra 7 #45-12 Medellin,3089990011,Electronics,PRN-HP-110,Impresora HP 110,600000,1,600000,AccesNet SAS,info@accesnet.com
+TXN-2014,2024-02-18,Natalia Vega,natalia.vega@mail.com,Cra 7 #45-12 Medellin,3089990011,Home,CHR-ERG-01,Silla Ergonomica,500000,3,1500000,AccesNet SAS,info@accesnet.com
+TXN-2014,2024-02-18,Natalia Vega,natalia.vega@mail.com,Cra 7 #45-12 Medellin,3089990011,Accessories,HDP-SNY-01,Audifonos Sony WH,450000,2,900000,AccesNet SAS,info@accesnet.com
+TXN-2015,2024-02-03,Laura Martinez,laura.martinez@gmail.com,Calle 10 #20-30 Bogota,3001112233,Accessories,USB-SNY-128,USB Sony 128GB,90000,3,270000,TechWorld SAS,ventas@techworld.com
+TXN-2015,2024-02-03,Laura Martinez,laura.martinez@gmail.com,Calle 10 #20-30 Bogota,3001112233,Electronics,TBL-SAM-10,"Tablet Samsung 10""",1200000,2,2400000,TechWorld SAS,ventas@techworld.com
+TXN-2016,2024-02-20,Andres Lopez,andres.lopez@gmail.com,Cra 45 #12-90 Medellin,3012223344,Electronics,PRN-HP-110,Impresora HP 110,600000,3,1800000,Distribuciones Andinas,ventas@andinas.com
+TXN-2016,2024-02-20,Andres Lopez,andres.lopez@gmail.com,Cra 45 #12-90 Medellin,3012223344,Home,DSK-MDF-02,Escritorio MDF,750000,1,750000,Distribuciones Andinas,ventas@andinas.com
+TXN-2016,2024-02-20,Andres Lopez,andres.lopez@gmail.com,Cra 45 #12-90 Medellin,3012223344,Home,LMP-LED-09,Lampara LED,120000,3,360000,Distribuciones Andinas,ventas@andinas.com
+TXN-2016,2024-02-20,Andres Lopez,andres.lopez@gmail.com,Cra 45 #12-90 Medellin,3012223344,Accessories,KEY-RED-001,Teclado Redragon,180000,3,540000,Distribuciones Andinas,ventas@andinas.com
+TXN-2017,2024-02-04,Natalia Vega,natalia.vega@mail.com,Cra 7 #45-12 Medellin,3089990011,Electronics,MON-LG-27,Monitor LG 27 pulgadas,850000,1,850000,AccesNet SAS,info@accesnet.com
+TXN-2017,2024-02-04,Natalia Vega,natalia.vega@mail.com,Cra 7 #45-12 Medellin,3089990011,Accessories,KEY-RED-001,Teclado Redragon,180000,2,360000,AccesNet SAS,info@accesnet.com
+TXN-2017,2024-02-04,Natalia Vega,natalia.vega@mail.com,Cra 7 #45-12 Medellin,3089990011,Home,CHR-ERG-01,Silla Ergonomica,500000,1,500000,AccesNet SAS,info@accesnet.com
+TXN-2018,2024-03-02,Valentina Cruz,valen.cruz@mail.com,Cra 12 #45-67 Cartagena,3045556677,Home,LMP-LED-09,Lampara LED,120000,3,360000,Global Supplies Co,sales@globalsupplies.com
+TXN-2018,2024-03-02,Valentina Cruz,valen.cruz@mail.com,Cra 12 #45-67 Cartagena,3045556677,Electronics,MON-LG-27,Monitor LG 27 pulgadas,850000,2,1700000,Global Supplies Co,sales@globalsupplies.com
+TXN-2019,2024-02-27,Natalia Vega,natalia.vega@mail.com,Cra 7 #45-12 Medellin,3089990011,Electronics,TBL-SAM-10,"Tablet Samsung 10""",1200000,1,1200000,Global Supplies Co,sales@globalsupplies.com
+TXN-2019,2024-02-27,Natalia Vega,natalia.vega@mail.com,Cra 7 #45-12 Medellin,3089990011,Accessories,HDP-SNY-01,Audifonos Sony WH,450000,3,1350000,Global Supplies Co,sales@globalsupplies.com
+TXN-2020,2024-03-02,Natalia Vega,natalia.vega@mail.com,Cra 7 #45-12 Medellin,3089990011,Home,DSK-MDF-02,Escritorio MDF,750000,2,1500000,TechWorld SAS,ventas@techworld.com
+TXN-2020,2024-03-02,Natalia Vega,natalia.vega@mail.com,Cra 7 #45-12 Medellin,3089990011,Electronics,LPT-DEL-001,Laptop Dell Inspiron,3200000,2,6400000,TechWorld SAS,ventas@techworld.com
+TXN-2020,2024-03-02,Natalia Vega,natalia.vega@mail.com,Cra 7 #45-12 Medellin,3089990011,Electronics,MON-LG-27,Monitor LG 27 pulgadas,850000,1,850000,TechWorld SAS,ventas@techworld.com
+TXN-2021,2024-02-02,Daniel Torres,daniel.torres@gmail.com,Calle 8 #14-77 Barranquilla,3034445566,Electronics,MON-LG-27,Monitor LG 27 pulgadas,850000,3,2550000,Global Supplies Co,sales@globalsupplies.com
+TXN-2022,2024-02-16,Andres Lopez,andres.lopez@gmail.com,Cra 45 #12-90 Medellin,3012223344,Electronics,TBL-SAM-10,"Tablet Samsung 10""",1200000,2,2400000,Global Supplies Co,sales@globalsupplies.com
+TXN-2022,2024-02-16,Andres Lopez,andres.lopez@gmail.com,Cra 45 #12-90 Medellin,3012223344,Accessories,USB-SNY-128,USB Sony 128GB,90000,3,270000,Global Supplies Co,sales@globalsupplies.com
+TXN-2023,2024-02-06,Valentina Cruz,valen.cruz@mail.com,Cra 12 #45-67 Cartagena,3045556677,Accessories,MSE-LOG-502,Mouse Logitech M502,150000,3,450000,Global Supplies Co,sales@globalsupplies.com
+TXN-2023,2024-02-06,Valentina Cruz,valen.cruz@mail.com,Cra 12 #45-67 Cartagena,3045556677,Home,LMP-LED-09,Lampara LED,120000,1,120000,Global Supplies Co,sales@globalsupplies.com
+TXN-2023,2024-02-06,Valentina Cruz,valen.cruz@mail.com,Cra 12 #45-67 Cartagena,3045556677,Electronics,PHN-XIA-12,Smartphone Xiaomi 12,1800000,3,5400000,Global Supplies Co,sales@globalsupplies.com
+TXN-2023,2024-02-06,Valentina Cruz,valen.cruz@mail.com,Cra 12 #45-67 Cartagena,3045556677,Home,SHF-MTL-03,Estanteria Metalica,420000,2,840000,Global Supplies Co,sales@globalsupplies.com
+TXN-2024,2024-02-13,Miguel Herrera,miguel.h@gmail.com,Calle 50 #10-11 Bucaramanga,3056667788,Electronics,MON-LG-27,Monitor LG 27 pulgadas,850000,2,1700000,Distribuciones Andinas,ventas@andinas.com
+TXN-2024,2024-02-13,Miguel Herrera,miguel.h@gmail.com,Calle 50 #10-11 Bucaramanga,3056667788,Accessories,MSE-LOG-502,Mouse Logitech M502,150000,1,150000,Distribuciones Andinas,ventas@andinas.com
+TXN-2024,2024-02-13,Miguel Herrera,miguel.h@gmail.com,Calle 50 #10-11 Bucaramanga,3056667788,Accessories,WBC-ANK-01,Webcam Anker HD,250000,3,750000,Distribuciones Andinas,ventas@andinas.com
+TXN-2024,2024-02-13,Miguel Herrera,miguel.h@gmail.com,Calle 50 #10-11 Bucaramanga,3056667788,Home,CLK-WAL-05,Reloj de Pared,80000,3,240000,Distribuciones Andinas,ventas@andinas.com
+TXN-2025,2024-02-08,Felipe Gomez,felipe.gomez@mail.com,Av 68 #23-45 Cali,3090001122,Electronics,MON-LG-27,Monitor LG 27 pulgadas,850000,3,2550000,HogarPro Ltda,contacto@hogarpro.com
+TXN-2026,2024-02-21,Laura Martinez,laura.martinez@gmail.com,Calle 10 #20-30 Bogota,3001112233,Home,CLK-WAL-05,Reloj de Pared,80000,1,80000,HogarPro Ltda,contacto@hogarpro.com
+TXN-2027,2024-02-28,Miguel Herrera,miguel.h@gmail.com,Calle 50 #10-11 Bucaramanga,3056667788,Accessories,KEY-RED-001,Teclado Redragon,180000,2,360000,TechWorld SAS,ventas@techworld.com
+TXN-2027,2024-02-28,Miguel Herrera,miguel.h@gmail.com,Calle 50 #10-11 Bucaramanga,3056667788,Accessories,USB-SNY-128,USB Sony 128GB,90000,1,90000,TechWorld SAS,ventas@techworld.com
+TXN-2028,2024-02-18,Sofia Ramirez,sofia.ramirez@hotmail.com,Av 5 #33-21 Cali,3023334455,Accessories,MSE-LOG-502,Mouse Logitech M502,150000,1,150000,Global Supplies Co,sales@globalsupplies.com
+TXN-2028,2024-02-18,Sofia Ramirez,sofia.ramirez@hotmail.com,Av 5 #33-21 Cali,3023334455,Electronics,PHN-XIA-12,Smartphone Xiaomi 12,1800000,1,1800000,Global Supplies Co,sales@globalsupplies.com
+TXN-2028,2024-02-18,Sofia Ramirez,sofia.ramirez@hotmail.com,Av 5 #33-21 Cali,3023334455,Home,DSK-MDF-02,Escritorio MDF,750000,1,750000,Global Supplies Co,sales@globalsupplies.com
+TXN-2028,2024-02-18,Sofia Ramirez,sofia.ramirez@hotmail.com,Av 5 #33-21 Cali,3023334455,Home,CHR-ERG-01,Silla Ergonomica,500000,3,1500000,Global Supplies Co,sales@globalsupplies.com
+TXN-2029,2024-02-14,Miguel Herrera,miguel.h@gmail.com,Calle 50 #10-11 Bucaramanga,3056667788,Home,DSK-MDF-02,Escritorio MDF,750000,3,2250000,Distribuciones Andinas,ventas@andinas.com
+TXN-2029,2024-02-14,Miguel Herrera,miguel.h@gmail.com,Calle 50 #10-11 Bucaramanga,3056667788,Accessories,WBC-ANK-01,Webcam Anker HD,250000,3,750000,Distribuciones Andinas,ventas@andinas.com
+TXN-2029,2024-02-14,Miguel Herrera,miguel.h@gmail.com,Calle 50 #10-11 Bucaramanga,3056667788,Home,SHF-MTL-03,Estanteria Metalica,420000,3,1260000,Distribuciones Andinas,ventas@andinas.com
+TXN-2029,2024-02-14,Miguel Herrera,miguel.h@gmail.com,Calle 50 #10-11 Bucaramanga,3056667788,Electronics,LPT-DEL-001,Laptop Dell Inspiron,3200000,1,3200000,Distribuciones Andinas,ventas@andinas.com
+TXN-2030,2024-02-02,Camila Rojas,camila.rojas@mail.com,Av 3 #22-44 Pereira,3067778899,Accessories,MSE-LOG-502,Mouse Logitech M502,150000,1,150000,AccesNet SAS,info@accesnet.com

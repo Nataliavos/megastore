@@ -1,0 +1,20 @@
+{
+  "name": "megastore",
+  "version": "1.0.0",
+  "description": "Prueba de desempeño - Bases de datos “La información no es conocimiento. La única fuente de conocimiento es la experiencia organizando el caos.”",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "module",
+    "url": "git+https://github.com/Nataliavos/megastore.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nataliavos/megastore/issues"
+  },
+  "homepage": "https://github.com/Nataliavos/megastore#readme"
+}
