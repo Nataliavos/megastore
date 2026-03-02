@@ -1,14 +1,30 @@
 {
   "name": "megastore",
   "version": "1.0.0",
-  "description": "Prueba de desempeño - Bases de datos “La información no es conocimiento. La única fuente de conocimiento es la experiencia organizando el caos.”",
+  "description": "Prueba de desempeño - Bases de datos",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
   },
   "repository": {
-    "type": "module",
     "url": "git+https://github.com/Nataliavos/megastore.git"
+  },
+  "dependencies": {
+    "csv-parse": "^6.1.0",
+    "csv-parser": "^3.2.0",
+    "dependencies": "^0.0.1",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.2.3",
+    "path": "^0.12.7",
+    "pg": "^8.19.0",
+    "url": "^0.11.4"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
   },
   "keywords": [],
   "author": "",

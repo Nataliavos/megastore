@@ -1,0 +1,305 @@
+{
+  "info": {
+    "_postman_id": "8f431bdc-4f66-4423-ae8a-6749def8a1b9",
+    "name": "MegaStore Global API",
+    "description": "Colección completa para probar los endpoints de MegaStore Global",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "12389013"
+  },
+  "item": [
+    {
+      "name": "🔄 Migrate",
+      "item": [
+        {
+          "name": "Cargar CSV completo",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/migrate",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "migrate"
+              ]
+            },
+            "description": "Carga masiva del CSV hacia PostgreSQL. Idempotente: se puede ejecutar varias veces sin duplicar datos."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "📦 Products",
+      "item": [
+        {
+          "name": "GET todos los productos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/products",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET producto por SKU",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/products/{{product-id}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "{{product-id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST crear producto",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"product_sku\": \"KBD-LOG-001\",\n  \"product_name\": \"Teclado Logitech K120\",\n  \"unit_price\": 85000,\n  \"quantity\": 20,\n  \"category_id\": 1\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT actualizar producto",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"product_name\": \"Teclado Logitech K120 Actualizado\",\n  \"unit_price\": 90000,\n  \"quantity\": 15,\n  \"category_id\": 1\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products/{{product-id}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "{{product-id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE eliminar producto (log en MongoDB)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/products/{{product-id}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "{{product-id}}"
+              ]
+            },
+            "description": "Elimina el producto de PostgreSQL y guarda un snapshot en MongoDB (audit_logs)."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "🏭 Suppliers",
+      "item": [
+        {
+          "name": "GET análisis de proveedores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/suppliers/analysis",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "suppliers",
+                "analysis"
+              ]
+            },
+            "description": "Proveedores ordenados por cantidad de items vendidos y valor total de inventario."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "👤 Customers",
+      "item": [
+        {
+          "name": "GET historial by customer-email",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/customers/{{customer-email}}/history",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "{{customer-email}}",
+                "history"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "🗂️ Categories (Consultas Avanzadas)",
+      "item": [
+        {
+          "name": "GET top productos Electronics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categories/Electronics/top-products",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "Electronics",
+                "top-products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET top productos Accessories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categories/Accessories/top-products",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "Accessories",
+                "top-products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET top productos Home",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categories/Home/top-products",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "Home",
+                "top-products"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "product-id",
+      "value": ""
+    },
+    {
+      "key": "customer-email",
+      "value": ""
+    }
+  ]
+}

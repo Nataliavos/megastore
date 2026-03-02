@@ -39,8 +39,7 @@ CREATE TABLE IF NOT EXISTS categories (
 -- 4. PRODUCTS
 -- ─────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS products (
-    product_id SERIAL PRIMARY KEY,
-	product_sku VARCHAR(20) NOT NULL UNIQUE,
+	product_sku VARCHAR(20) NOT NULL UNIQUE PRIMARY KEY,
 	product_name VARCHAR(255) NOT NULL,
 	unit_price NUMERIC(12, 2) NOT NULL CHECK (unit_price >= 0),
 	category_id INTEGER NOT NULL REFERENCES categories(category_id)
@@ -54,10 +53,10 @@ CREATE TABLE IF NOT EXISTS transactions (
 	transaction_id VARCHAR(20) NOT NULL UNIQUE,
 	date DATE NOT NULL,
 	customer_id INTEGER NOT NULL REFERENCES customers(customer_id),
-	product_id INTEGER NOT NULL REFERENCES products(product_id),
+	product_sku VARCHAR(20) NOT NULL REFERENCES products(product_sku),
 	supplier_id INTEGER NOT NULL REFERENCES suppliers(supplier_id),
 	quantity INTEGER NOT NULL,
-	total_line_value NUMERIC(12, 2) NOT NULL CHECK (total_line_value >= 0),
+	total_line_value NUMERIC(12, 2) NOT NULL CHECK (total_line_value >= 0)
 );
 
 -- ─────────────────────────────────────────

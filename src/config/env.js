@@ -1,8 +1,12 @@
 import { config } from 'dotenv';
+import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
+import { error } from 'console';
 
-config({path: resolve(__dirname, '../../.env')}); // carga variables desde .env
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+config({ path: resolve(__dirname, '../../.env') }); // carga variables desde .env
 
 // Variables obligatorias
 const required = ["MONGO_URI", "POSTGRES_URI"];
@@ -10,7 +14,7 @@ const required = ["MONGO_URI", "POSTGRES_URI"];
 for (const key of required) {
     if (!process.env[key]) {
         console.log(`Error: Missing required environment variable ${key}`);
-        throw new Error("");
+        throw new Error(`Environment variable ${key} is required`);
            
     }
     

@@ -1,5 +1,12 @@
 import { Pool } from 'pg';
-import { env } from 'env.js';
+import { env } from './env.js';
+import { readFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, resolve } from 'path';
+
+// ── ESM no tiene __dirname nativo, se debe crear manualmente
+const __filename = fileURLToPath(import.meta.url);
+const __dirname  = dirname(__filename);
 
 // Pool de conexiones: reutiliza conexiones en lugar de crear una nueva cada vez
 const pool = new Pool({
@@ -32,6 +39,27 @@ const testConnection = async () => {
     process.exit(1);
   } finally {
     if (client) client.release(); // siempre libera el cliente al pool
+  }
+};
+
+/**
+ * Lee el archivo schema.sql y lo ejecuta en PostgreSQL.
+ * Es idempotente: puede ejecutarse múltiples veces sin errores.
+ */
+const initSchema = async () => {
+  const schemaPath = resolve(__dirname, 'schema.sql');
+  const sql        = readFileSync(schemaPath, 'utf-8');
+  const client     = await pool.connect();
+
+  try {
+    console.log('🏗️  Initializing database schema...');
+    await client.query(sql);
+    console.log('✅ Schema started successfully');
+  } catch (error) {
+    console.error('❌ Error starting schema:', error.message);
+    throw error;
+  } finally {
+    client.release();
   }
 };
 
