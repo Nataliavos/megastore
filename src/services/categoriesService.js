@@ -18,7 +18,7 @@ export const getTopProducts = async (req, res, next) => {
       FROM   categories c
       JOIN   products p     USING (category_id)
       JOIN   transactions t USING (product_sku)
-      WHERE  LOWER(c.category_name) = LOWER($1)
+      WHERE  LOWER(c.category) = LOWER($1)
       GROUP  BY p.product_sku, p.product_name
       ORDER  BY total_revenue DESC
     `, [req.params.name]);

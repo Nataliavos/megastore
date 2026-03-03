@@ -1,5 +1,5 @@
 import { createReadStream } from 'fs';
-import { parse } from 'csv-parse/sync';
+import { parse } from 'csv-parse';
 import { env } from '../config/env.js';
 import { pool }  from '../config/postgres.js';
 
@@ -25,7 +25,7 @@ export const runMigration = async (req, res, next) => {
 
     await client.query('BEGIN');
 
-    const records = await parseCsv(env.fileCsv);
+    const records = await parseCsv(env.fileDataCsv);
 
     for (const row of records) {
 
@@ -36,11 +36,11 @@ export const runMigration = async (req, res, next) => {
         `INSERT INTO categories (category)
         VALUES ($1)
         ON CONFLICT (category) DO UPDATE SET category = EXCLUDED.category
-        RETURNING id`,
+        RETURNING category_id`,
         [row.product_category]
       );
       const { rows: catRows } = await client.query(
-        `SELECT category_id FROM categories WHERE category_name = $1`,
+        `SELECT category_id FROM categories WHERE category = $1`,
         [row.product_category]
       );
       const categoryId = catRows[0].category_id;
@@ -53,7 +53,7 @@ export const runMigration = async (req, res, next) => {
         VALUES ($1, $2)
         ON CONFLICT (supplier_email) DO UPDATE
           SET supplier_name    = EXCLUDED.supplier_name
-        RETURNING id`,
+        RETURNING supplier_id`,
         [row.supplier_name, row.supplier_email]
       );
       const { rows: supRows } = await client.query(
@@ -72,7 +72,7 @@ export const runMigration = async (req, res, next) => {
           SET customer_name    = EXCLUDED.customer_name,
               customer_address   = EXCLUDED.customer_address,
               customer_phone = EXCLUDED.customer_phone
-        RETURNING id`,
+        RETURNING customer_id`,
         [row.customer_name, row.customer_email, row.customer_address, row.customer_phone]
       );
       const { rows: custRows } = await client.query(
@@ -95,8 +95,8 @@ export const runMigration = async (req, res, next) => {
           SET product_name = EXCLUDED.product_name,
             unit_price   = EXCLUDED.unit_price,
             category_id  = EXCLUDED.category_id
-        RETURNING id`,
-        [row.product_sku, row.product_name, row.unit_price, categoryMap.get(row.product_category)]
+        RETURNING product_sku`,
+        [row.product_sku, row.product_name, row.unit_price, categoryId]
       );
 
       // ─────────────────────────────────────────────────────────────
@@ -104,7 +104,7 @@ export const runMigration = async (req, res, next) => {
       // ─────────────────────────────────────────────────────────────
 
       const { rows: check } = await client.query(
-        `SELECT item_id FROM transactions
+        `SELECT id FROM transactions
          WHERE transaction_id = $1 AND product_sku = $2`,
         [row.transaction_id, row.product_sku]
       );
@@ -128,25 +128,7 @@ export const runMigration = async (req, res, next) => {
     } else {
       skipped++;
     }
-
-  
-
-
   }
-}
-
-
-
-
-      
-      
-
-      
-
-      
-
-      
-    }
 
     await client.query('COMMIT');
     res.json({
@@ -164,17 +146,6 @@ export const runMigration = async (req, res, next) => {
   }
 
 };
-// ─────────────────────────────────────────────────────────────
-// CONFIG DEBUG
-// ─────────────────────────────────────────────────────────────
-const DEBUG = process.env.DEBUG_MIGRATION === 'true';
-
-const log = {
-  info:  (msg) => console.log(msg),
-  debug: (msg) => DEBUG && console.log(`   🔍 [DEBUG] ${msg}`),
-  warn:  (msg) => console.warn(`   ⚠️  ${msg}`),
-  error: (msg) => console.error(`   ❌ ${msg}`),
-};
 
 // ─────────────────────────────────────────────────────────────
 // HELPER
@@ -188,72 +159,3 @@ const parseCsv = (filePath) =>
       .on('end',   ()    => resolve(rows))
       .on('error', (err) => reject(err));
   });
-
-
-
-
-// ------------------------
-
-
-// ─────────────────────────────────────────────────────────────
-// MAIN ORCHESTRATOR
-// ─────────────────────────────────────────────────────────────
-
-export const runMigration2 = async () => {
-  log.info('🚀 Starting migration CSV → PostgreSQL...');
-  log.info(`🔧 DEBUG mood: ${DEBUG ? 'ACTIVATED' : 'deactivated'}`);
-  log.info('═'.repeat(50));
-
-  const client = await pool.connect();
-
-  let inserted = 0;
-  let skipped  = 0;
-
-  try {
-
-    await client.query('BEGIN');
-
-    const records = await parseCsv(env.fileCsv);
-
-    for (const row of records) {
-      
-
-
-    }
-
-    // Nuevo: valida ANTES de insertar
-    validateCSV(rows);
-
-    const categoryMap = await migrateCategories(client, rows);
-    const customerMap   = await migrateCustomers(client, rows);
-    const supplierMap    = await migrateSuppliers(client, rows);
-    const productMap = await migrateProducts(client, rows, categoryMap);
-
-    await migrateTransactions(client, rows, { customerMap, supplierMap, productMap });
-
-    await client.query('COMMIT');
-
-    log.info('\n' + '═'.repeat(50));
-    log.info('✅ Migration completed successfully');
-    log.info('═'.repeat(50));
-
-    return {
-      customers:     customerMap.size,
-      suppliers:     supplierMap.size,
-      products:      productMap.size,
-      transactions:  rows.length,
-      csvPath:      CSV_PATH,
-    };
-
-  } catch (error) {
-    await client.query('ROLLBACK');
-    log.error('Migration failed — ROLLBACK executed');
-    log.error(`Error: ${error.message}`);
-    if (DEBUG) console.error(error.stack);
-    throw error;
-  } finally {
-    client.release();
-  }
-};
-
-export { runMigration };

@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getAnalysis } from '../service/suppliersService.js';
+import { getAnalysis } from '../services/suppliersService.js';
 
 const router = Router();
 router.get('/analysis', getAnalysis);   // GET /api/suppliers/analysis

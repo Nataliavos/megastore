@@ -83,4 +83,4 @@ const query = async (text, params = []) => {
   }
 };
 
-export { pool, query, testConnection };
+export { pool, query, testConnection, initSchema };

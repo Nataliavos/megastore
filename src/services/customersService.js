@@ -17,7 +17,7 @@ export const getHistory = async (req, res, next) => {
         p.product_sku,
         p.product_name,
         t.quantity,
-        t.unit_price,
+        p.unit_price,
         t.total_line_value
       FROM   customers c
       JOIN   transactions t USING (customer_id)
